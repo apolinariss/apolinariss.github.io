@@ -13,7 +13,7 @@ h1 {
 }
 .btn1 {
 	position: absolute;
-	top: 30%;
+	top:33%;
 	left: 10%;
 	transform: translate(-50%, -50%);
 	display: flex;
@@ -169,7 +169,7 @@ h1 {
 
 .text {
 	position: absolute;
-	top: 35%;
+	top: 37%;
 	left: 2%;
 	color: #CD5C5C;
 	font-size: 60px;
@@ -180,7 +180,7 @@ h1 {
 
 .text1 {
 	position: absolute;
-	top: 43%;
+	top: 48%;
 	left: 2%;
 	color: #CD5C5C;
 	font-size: 50px;
