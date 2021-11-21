@@ -1,0 +1,108 @@
+body {
+	background-color: #FFC0CB;
+}
+
+
+.header {
+	background-color: #fff;
+	margin: 1%;
+	height: 90px;
+	max-height:10.5%;
+	overflow: hidden;
+	text-align: center;
+}
+
+.main-info {
+	
+
+}
+
+.main {
+	background-color: #fff;
+	position: absolute;
+	width: 48%;
+	height: 90px;
+	left: 1.5%;
+	text-align: center;
+}
+
+.contacts {
+	background-color: #fff;
+	position: absolute;
+	width: 48%;
+	height: 90px;
+	left: 50.45%;
+	text-align: center;
+}
+
+div p{
+	font-size: 30px;
+	margin-top: 25px;
+	margin-bottom: 15px;
+
+}
+
+.left-block {
+	background-color: #fff;
+	position: absolute;
+	width:34.4% ;
+	height:118px;
+	left: 1.5%;
+
+}
+
+.right-block {
+	background-color: #fff;
+	position: absolute;
+	width:26.4%;
+	height:118px;
+	left: 72%;
+
+}
+
+.center-block {
+	background-color: #fff;
+	position: absolute;
+	width:34.4% ;
+	height:118px;
+	left: 36.7%;
+
+}
+
+.block {
+	background-color: #fff;
+	position: absolute;
+	width: 96.9%;
+	height: 254px;
+	left: 1.5%;
+
+}
+
+.medium-block {
+	background-color: #fff;
+	position: absolute;
+	width: 34.4%;
+	height: 250px;
+	left: 36.7%;
+
+}
+
+.line {
+	margin-top: 120px;
+
+}
+
+.line1 {
+	margin-top: 251px;
+
+}
+
+.line2 {
+	margin-top: 520px;
+
+}
+
+.line3 {
+	margin-top: 652px;
+
+}
