@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="utf-8">
+<script type="text/javascript">
+window.onload = function(){
+	var canvas = document.createElement('canvas');
+	canvas.width = window.innerWidth - 20;
+	canvas.height = window.innerHeight - 20;
+	
+	var div = document.createElement('div');
+	
+	var ctx = canvas.getContext("2d"),
+		length = canvas.width * canvas.height,
+		drawing = false, x, y;
+		
+		
+		
+	function showPercentage(){
+		var data = new Int32Array( ctx.getImageData(0,0,canvas.width,canvas.height).data.buffer );
+		for(var i = length, j = 0; i; i--) if( data[i] !== 0) j++;
+		div.innerHTML = 'Зафарбовано ' + (j / length * 100).toFixed(2)  + '% (' + j + 'px)';
+	}
+	
+	canvas.onmousedown = function(e){
+		ctx.beginPath();
+		ctx.strokeStyle = '#000000';
+		ctx.lineWidth = 10;
+		ctx.moveTo(e.clientX, e.clientY);
+		
+		drawing = true;
+	}
+	
+	canvas.onmouseup = function(e){
+		if (drawing) {	
+			ctx.lineTo(e.clientX, e.clientY);	
+			
+			showPercentage();
+			
+			drawing = false;
+		}
+	}
+	
+	canvas.onmousemove = function(e){
+		if (drawing) {	
+			ctx.lineTo(x = e.clientX, y = e.clientY);
+			ctx.stroke();
+			ctx.moveTo(x, y);
+		}
+	}
+	
+	document.body.appendChild(canvas);
+	document.body.appendChild(div);
+	document.getElementById('color').oninput = function(){
+	myColor = this.value;
+}
+}
+</script>
+<style>
+	*{margin:0;padding:0}
+	html,body{
+		width:80%;
+		height:80%;
+		background: url(IMG_0133.PNG);
+
+
+	}
+	canvas {
+		cursor:crosshair;
+	}
+	div {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		cursor: default;
+		font-size:18pt;
+	}
+</style>
+</head>
+<body>
+</body>
+</html>
