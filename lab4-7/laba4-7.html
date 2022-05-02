@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Парсинг XML</title>
+<script category="text/javascript">
+
+function loadXML(file) {
+ try { 
+ var req = new XMLHttpRequest();
+ req.open("GET", file, false);
+ req.send(null);
+ return req.responseXML;
+ }
+ catch (e) {
+
+ try {
+ var xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
+ xmlDoc.async = false;
+ xmlDoc.load(file);
+ return xmlDoc;
+ }
+ catch (e) {
+ alert(e.message);
+ return null;
+ }
+ }
+} 
+
+</script>
+
+<link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+<div class="box">
+    <a name="LA"  onmouseover="choose(this)" style="color: #000000;">Latte</a> <br />
+    <a name="CA"  onmouseover="choose(this)" style="color: #000000;" >Сappuccino</a> <br/> 
+    <a name="RA"  onmouseover="choose(this)" style="color: #000000;">Raf</a> <br /> 
+</div>
+
+
+<div id="data">
+    
+    <br /> 
+    <div >
+        <div name="name0" id="name0"></div>
+        <div name="address0" id="address0"></div>
+        <div name="price0" id="price0"></div>
+    </div>
+    <br /> <br />
+    <div>
+        <div name="name1" id="name1"></div>
+        <div name="address1" id="address1"></div>
+        <div name="price1" id="price1"></div>
+    </div>
+    <br /> <br />
+    <div>
+        <div name="name2" id="name2"></div>
+        <div name="address2" id="address2"></div>
+        <div name="pricer2" id="price2"></div>
+    </div>
+    <br />
+
+</div>
+
+
+<script category="text/javascript">
+
+var xmlDoc = loadXML("https://PivoBad.github.io/cofe.xml");
+
+function choose(coloredLink) {
+ var group = coloredLink.name;
+ var index = 0;
+ var divNum = 3; 
+
+
+
+ for (var i = 0; i < xmlDoc.getElementsByTagName("coffee").length; i++) {
+
+ var name = "name" + index;
+ var address = "address" + index;
+ var price = "price" + index;
+ var data = document.getElementById('data');
+
+ if (xmlDoc.getElementsByTagName("coffee")
+ [i].attributes.getNamedItem("group").nodeValue == group) { 
+
+
+ document.getElementById(name).innerHTML = xmlDoc.getElementsByTagName("name")[i].childNodes[0].nodeValue;
+ document.getElementById(address).innerHTML = xmlDoc.getElementsByTagName("address")[i].childNodes[0].nodeValue;
+ document.getElementById(price).innerHTML = xmlDoc.getElementsByTagName("price")[i].childNodes[0].nodeValue;
+
+ index++;
+ 
+  data.style.fontFamily = "'Tapestry'";
+  data.style.borderRadius = "10px 10px 10px 10px";
+  data.style.transition =  ".4s linear";
+   
+    if (group == "LA") {
+    data.style.backgroundColor = "rgb(210,205,199)";
+    data.style.boxShadow = "0px 6px 14px azure";
+    }
+
+    if (group == "CA") {
+    data.style.backgroundColor = "rgb(210,205,199)";
+    data.style.boxShadow = "0px 6px 14px azure";
+    }
+
+    if (group == "RA") {
+    data.style.backgroundColor = "rgb(210,205,199)";
+    data.style.boxShadow = "0px 5px 15px azure"
+    } 
+
+ }
+
+}
+
+ for (var temp = index; temp < divNum; temp++) {
+
+ name = "name" + temp;
+ address = "address" + temp;
+ price = "price" + temp;
+
+ document.getElementById(name).innerHTML = "";
+ document.getElementById(address).innerHTML = "";
+ document.getElementById(category).innerHTML = "";
+
+ }
+
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+html{
+    background-image: url(fon.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.content {
+    font-family: 'Old Standard TT', serif;
+    background-color: #FFDEAD;
+    text-align: center;
+    float: left;
+    width: 70%;
+    margin: 15%;
+    margin-top: 2%;
+    margin-left: 15%;
+    height: 100%;
+    margin-block-end: 5%;
+}
+body{
+    background-color: #DEB887;
+    color: #2d344b;
+}
+table{
+    background-color: #FFF8DC;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 1%;
+    margin-block-end: 5%;
+    float: center;
+    position: relative;
+    border: dashed #D2691E 3px;
+    border-collapse: collapse;
+}
+.table{
+    height: 50%;
+    float: left;
+    position: relative;
+}
+tr, td{
+    font-size: 26px;
+    padding: 5px;
+    border: dashed #D2691E 3px;
+}

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cofe> 
+    <coffee group="LA">
+        <name>#Kiosk</name>
+        <address>вулиця Соборна, 16/9</address>
+        <price>38</price>
+    </coffee>
+    <coffee group="LA">
+        <name>KOFAN Aperol BAR</name>
+        <address>вулиця Лейтенанта Покладова, 7</address>
+        <price>45</price>
+    </coffee>
+    <coffee group="LA">
+        <name>BARISTA COFFEE</name>
+        <address>Республіканська вулиця, 61Б</address>
+        <price>36</price>
+    </coffee>
+    <coffee group="CA">
+        <name>#Kiosk</name>
+        <address>вулиця Соборна, 16/9</address>
+        <price>35</price>
+    </coffee>
+    <coffee group="CA">
+        <name>KOFAN Aperol BAR</name>
+        <address>вулиця Лейтенанта Покладова, 7</address>
+        <price>42</price>
+    </coffee>
+    <coffee group="CA">
+        <name>BARISTA COFFEE</name>
+        <address>Республіканська вулиця, 61Б</address>
+        <price>30</price>
+    </coffee>
+    <coffee group="RA">
+        <name>#Kiosk</name>
+        <address>вулиця Соборна, 16/9</address>
+        <price>45</price>
+    </coffee>
+    <coffee group="RA">
+        <name>KOFAN Aperol BAR</name>
+        <address>вулиця Лейтенанта Покладова, 7</address>
+        <price>50</price>
+    </coffee>
+    <coffee group="RA">
+        <name>BARISTA COFFEE</name>
+        <address>Республіканська вулиця, 61Б</address>
+        <price>48</price>
+    </coffee>
+</cofe>
