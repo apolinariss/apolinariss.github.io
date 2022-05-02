@@ -38,7 +38,7 @@ table{
     position: relative;
 }
 tr, td{
-    font-size: 26px;
+    font-size: 24px;
     padding: 5px;
     border: dashed #D2691E 3px;
 }
