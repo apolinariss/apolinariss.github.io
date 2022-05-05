@@ -1,0 +1,75 @@
+body{
+	background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+div{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.bottom {
+    animation: hideshow 5s 0s ease 1;
+    animation-direction: reverse;
+    animation-delay: 0.9999s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.bottom-right {
+    animation: hideshow 5s 0s ease 1;
+    animation-direction: reverse;
+    animation-delay: 0.6666s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.bottom-left {
+    animation: hideshow 5s 0s ease 1;
+    animation-direction: reverse;
+    animation-delay: 1.3332s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.top {
+    animation: hideshow 5s 0s ease 3;
+    animation-direction: reverse;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.top-right {
+    animation: hideshow 5s 0s ease 3;
+    animation-direction: reverse;
+    animation-delay: 0.3333s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.top-left {
+    animation: hideshow 5s 0s ease 1;
+    animation-direction: reverse;
+    animation-delay: 1.665s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+@keyframes hideshow {
+    0% {
+        opacity: 0;
+    }
+    16% {
+      opacity:1;
+    }
+    32% {
+      opacity:1;
+    }
+    48% {
+      opacity:1;
+    }
+    64%{
+      opacity:1;
+    }
+    80% {
+      opacity:1;
+    }
+    100% {
+      opacity:0;
+    }
+
+}
+
